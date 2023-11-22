@@ -1,0 +1,49 @@
+
+#tituloContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  background-color: rgb(255, 156, 161);
+  width: 300px;
+  border-radius: 50px;
+  border: solid 3px #9d9d9d;
+  height: 50px;
+  color: #f0fbff;
+  img{
+    height: 40px;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+  user-select: none;
+  background: linear-gradient(
+    to right,
+    #ff6666,
+    #ff6666 70%,
+    #ff8080 71%,
+    #ff8080 97%,
+    #ff8080 100%
+  );
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: 2px #757575;
+    font-size: 2.5rem;
+  }
+  a{
+    text-decoration: none;
+    background-color: #ff4545;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: x-large;
+  }
+}
+
