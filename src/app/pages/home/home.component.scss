@@ -1,0 +1,18 @@
+#container {
+  height: calc(100vh - 100px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background-image: linear-gradient(85deg, #d37553 0, #d36b55 8.33%, #d36057 16.67%, #d15359 25%, #cd455c 33.33%, #c7345f 41.67%, #c01f63 50%, #b70068 58.33%, #ac006e 66.67%, #a00076 75%, #92007f 83.33%, #810088 91.67%, #6c0091 100%);
+
+}
+
+app-foto-pokemon{
+  margin-left: 100px;
+}
+
+#tarjetasContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
