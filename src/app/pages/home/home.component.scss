@@ -15,4 +15,10 @@ app-foto-pokemon{
   display: flex;
   flex-direction: column;
   gap: 5px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#spinner {
+  max-height: 50px;
 }
