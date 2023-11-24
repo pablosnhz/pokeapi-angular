@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 import { PokemonService } from '../../services/pokemon.service';
 import { Resultado } from '../../interfaces/pokeapi';
+import { Pokemon } from 'src/app/interfaces/pokemon';
 
 
 @Component({
@@ -11,12 +13,13 @@ import { Resultado } from '../../interfaces/pokeapi';
 export class HomeComponent implements OnInit{
   @ViewChild('tarjetas') tarjetasElement!:ElementRef;
 
-  constructor(private pokemon: PokemonService){}
+  constructor(private pokemonService: PokemonService){}
 
   listaPokemons:Resultado[] = []
   pagina:number = 1;
   cargando: boolean = false;
   aperturaDetalle: boolean = false;
+  pokemonSeleccionado?: Pokemon;
 
   ngOnInit(): void {
     this.cargarLista();
@@ -24,7 +27,7 @@ export class HomeComponent implements OnInit{
 
   async cargarLista(){
     this.cargando = true;
-    this.listaPokemons = [...this.listaPokemons, ...await this.pokemon.getByPage(this.pagina)]
+    this.listaPokemons = [...this.listaPokemons, ...await this.pokemonService.getByPage(this.pagina)]
     this.cargando = false;
     this.pagina++;
 
@@ -40,5 +43,9 @@ export class HomeComponent implements OnInit{
         this.cargarLista()
       }
   }
+  async tarjetaClickeada(id: string) {
+    this.pokemonSeleccionado = await this.pokemonService.getById(id)
+  }
+
 }
 
