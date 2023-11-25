@@ -1,11 +1,13 @@
 <div id="container">
   <div class="area">
-    <app-tarjeta-pokemon></app-tarjeta-pokemon>
+    <app-tarjeta-pokemon
+    [fullData]="pokemon"
+    ></app-tarjeta-pokemon>
   </div>
   <div class="area">
     <p><span class="etiqueta">Tipo</span><span class="tipo" *ngFor="let tipo of pokemon?.types"> {{ tipo.type.name }} </span></p>
-    <p><span class="etiqueta">Altura</span> {{ pokemon?.height }} </p>
-    <p><span class="etiqueta">Peso</span> {{ pokemon?.weight }} </p>
+    <p><span class="etiqueta">Altura</span> {{ pokemon?.height }} ' </p>
+    <p><span class="etiqueta">Peso</span> {{ pokemon?.weight }} lbs. </p>
 
   </div>
   <div class="area">
