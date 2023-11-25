@@ -1,6 +1,11 @@
 #container {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+}
+
+#datos {
   height: 600px;
-  width: 95vw;
+  width: 90vw;
   background-color: #fceab8;
   display: grid;
   grid-template-rows: 1fr 3fr 3fr;
@@ -76,4 +81,22 @@
   border-radius: 5px;
   padding: 5px 20px;
   margin-left: 5px;
+}
+
+button {
+  background-color: #fceab8;
+  border-radius: 0 25px 25px 0;
+  border: unset;
+  cursor: pointer;
+  img {
+    height: 50px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    &.girar{
+      rotate: 180deg;
+    }
+    &:hover {
+      scale: 1.1;
+    }
+  }
 }

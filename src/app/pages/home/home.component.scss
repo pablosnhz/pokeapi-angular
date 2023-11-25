@@ -10,11 +10,21 @@
 app-foto-pokemon{
   margin-left: 100px;
   z-index: 2;
+  transition: 0.5s ease-in-out;
+  &.abierto{
+    margin-left: 50px;
+  }
 }
 
 app-detalle{
   position: absolute;
   z-index: 1;
+  left: -90vw;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  &.abierto{
+    left: 0;
+  }
 }
 
 #tarjetasContainer{
@@ -29,3 +39,4 @@ app-detalle{
 #spinner {
   max-height: 50px;
 }
+

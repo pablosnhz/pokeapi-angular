@@ -1,4 +1,5 @@
 <div id="container">
+  <div id="datos">
   <div class="area">
     <app-tarjeta-pokemon
     [fullData]="pokemon"
@@ -17,4 +18,8 @@
       <div></div>
     </div>
   </div>
+</div>
+  <button (click)="clicked.emit()">
+    <img src="./../../../assets/img/flecha.png" alt="" [ngClass]="{girar: abierto}">
+  </button>
 </div>
