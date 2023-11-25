@@ -7,5 +7,8 @@ import { Pokemon } from 'src/app/interfaces/pokemon';
   styleUrls: ['./foto-pokemon.component.scss']
 })
 export class FotoPokemonComponent {
+
   @Input() pokemon?:Pokemon;
+  descripcion: string = '';
+
 }
