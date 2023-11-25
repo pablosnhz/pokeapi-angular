@@ -45,6 +45,10 @@ export class HomeComponent implements OnInit{
       }
   }
   async tarjetaClickeada(id: string) {
+    if(this.pokemonSeleccionado && id === this.pokemonSeleccionado?.id.toString()){
+      this.cambiarEstadoDetalle()
+      return
+    }
     this.pokemonSeleccionado = await this.pokemonService.getById(id)
   }
 
